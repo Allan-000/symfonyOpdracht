@@ -22,4 +22,19 @@ class appController extends AbstractController{
         ]
     );
     }
+    /**
+     * @Route("/login")
+     */
+    public function loginPage(){
+        $userName="Allan";
+        return $this->render('userTemplates/login.html.twig',[
+            'username' => $userName
+        ]);
+    }
+    /**
+     * @Route("/register")
+     */
+    public function registerPage(){
+        return $this->render('userTemplates/register.html.twig', []);
+    }
 }
